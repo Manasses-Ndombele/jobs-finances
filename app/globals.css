@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { background: #000; color: #fff; }
+body { font-family: var(--font-sora), system-ui, sans-serif; }
+
+@layer components {
+  .card { @apply rounded-xl border border-neon/25 bg-black p-4; box-shadow: 0 0 18px rgba(255,214,10,.06); }
+  .input { @apply w-full rounded-lg border border-neon/30 bg-black px-3 py-2 text-sm text-white outline-none placeholder:text-white/40 focus:border-neon focus:shadow-[0_0_12px_rgba(255,214,10,.35)]; color-scheme: dark; }
+  .btn { @apply rounded-lg bg-neon px-4 py-2 text-sm font-semibold text-black transition hover:shadow-[0_0_16px_rgba(255,214,10,.6)] disabled:opacity-50; }
+  .btn-ghost { @apply rounded-lg border border-neon/40 px-4 py-2 text-sm text-neon transition hover:bg-neon/10; }
+  .btn-danger { @apply rounded-lg border border-red-500/60 px-4 py-2 text-sm text-red-400 transition hover:bg-red-500/10; }
+  .label { @apply mb-1 block text-xs text-white/60; }
+}
+:focus-visible { outline: 2px solid #FFD60A; outline-offset: 2px; }
